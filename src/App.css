@@ -1,9 +1,9 @@
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 
@@ -35,4 +35,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.SearchStyle:focus{
+  outline: none !important;
+    border-color: #61DBFB;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.SearchStyle{
+  width: 20em;
+  height: 3em;
+  font-size: 1em;
+  padding: 0px 10px ;
+  border-radius: 5px;
+}
+
+.ButtonStyle{
+  height: 40px;
+  width: 100px;
+  margin: 10px 20px;
+  color: white;
+  background: #FB5252 ; 
+  transition-duration: 0.4s;
+}
+
+.ButtonStyle:hover{
+  background: white ;
+  border-color: #FB5252;
+  color: #FB5252;
+}
+
+.ButtonStyle:focus {outline:0;}
+
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* center items horizontally, in this case */
+  align-items: center; /*center items vertically*/
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* center items horizontally, in this case */
+  align-items: center;
+}
+
+.listCard{
+  height: 5em;
+  width: 60%;
+  font-size: 20px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  background-color: white;
+  border-color: #61DBFB;
+  box-shadow: 0 0 10px rgb(112, 111, 111);
 }
