@@ -75,15 +75,6 @@ class App extends React.Component {
   }
 }
 
-// function AddButton() {
-//   return <button onClick={this.props.addItemToList} className="ButtonStyle ">
-//     Add to List
-//   </button>
-// }
-
-// function CheckBox() {
-//   return <input type="checkbox" />;
-// }
 function SearchBar() {
   return (
     <input type="text" id="todoBox" placeholder='Add a Quick todo...' className='SearchStyle'></input>
