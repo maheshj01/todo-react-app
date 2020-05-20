@@ -68,7 +68,6 @@
 
 .ButtonStyle:focus {outline:0;}
 
-
 .row{
   display: flex;
   flex-direction: row;
@@ -79,17 +78,37 @@
 .column{
   display: flex;
   flex-direction: column;
+  
   justify-content: space-evenly; /* center items horizontally, in this case */
   align-items: center;
 }
 
+.rowcard{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* center items horizontally, in this case */
+  align-items: center; /* center items vertically */
+}
 .listCard{
   height: 5em;
   width: 60%;
   font-size: 20px;
   margin: 10px 0px;
+  padding:  5px 10px;
   border-radius: 5px;
   background-color: white;
   border-color: #61DBFB;
   box-shadow: 0 0 10px rgb(112, 111, 111);
+}
+.padding{
+  padding:  10px 10px;
+}
+input[type="checkbox"] {
+  zoom: 1.8;
+}
+
+p {
+  font-size: 15px;
+  text-align: left;
+
 }

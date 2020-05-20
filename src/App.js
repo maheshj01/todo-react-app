@@ -5,12 +5,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
   /// TODO : STORE and fetch data to and from the cache
-   
+
   constructor(props) {
     super(props);
     this.state = {
       list: [],
       newItem: "",
+      isDone: true
     }
   }
   addItemToList(item) {
@@ -19,8 +20,8 @@ class App extends React.Component {
       console.log(input.value);
       const newItem = {
         value: item,
-        id: Date.now(),
-        isDone: false
+        id: new Date().toDateString(),
+        isDone: this.state.isDone
       };
       const newList = [...this.state.list];
       newList.push(newItem);
@@ -32,6 +33,16 @@ class App extends React.Component {
       input.value = '';
     }
   }
+
+  onCheckBoxTap(status) {
+    this.setState({
+      isDone: !this.state.isDone
+    });
+
+  }
+  // componentDidMount(){
+  //   this.getDate();
+  // }
   render() {
     return (
       <div className='App'>
@@ -49,7 +60,13 @@ class App extends React.Component {
         <div className='column'>
           {this.state.list.map((item) => {
             return <div className="listCard">
-              <p>{item.value}</p>
+              <div className="rowcard">
+                <h6>{item.id}</h6>
+                < input id="checked" type="checkbox" defaultChecked={item.isDone} onClick={() => {
+                  this.onCheckBoxTap(item.isDone)
+                }} />
+              </div>
+              <p style={{ textDecorationLine: this.state.isDone == true ? "line-through" : "none" }}>{item.value}</p>
             </div>
           })
           }
